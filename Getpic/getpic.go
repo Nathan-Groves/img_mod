@@ -13,7 +13,7 @@ func GetImage() {
     // URL of the image you want to download
 
   	 reader := bufio.NewReader(os.Stdin)
-	fmt.Println("Give me a number")
+	fmt.Println("Give me a image url for getImage")
 
 	fmt.Print("-> ")
 
