@@ -14,7 +14,7 @@ func PrintColors() {
 
   fmt.Println("Please type the image url you would like to use")
 
-  fmt.Scanln(imageUrl)
+  fmt.Scanln(&imageUrl)
   
 	reader, err := os.Open("imageUrl")
 	if err != nil {
