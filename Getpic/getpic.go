@@ -15,7 +15,7 @@ func GetImage() {
 
 	fmt.Println("Please type the image url you would like to use")
 
-	fmt.Scanln(imageUrl)
+	fmt.Scanln(&imageUrl)
     
     // Create an HTTP GET request
     response, err := http.Get(imageUrl)
