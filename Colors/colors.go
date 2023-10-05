@@ -2,6 +2,7 @@ package Colors
 
 import (
 	"fmt"
+	"bufio"
 	"image"
 	_ "image/jpeg"
 	_ "image/png" // import this package to decode PNGs
