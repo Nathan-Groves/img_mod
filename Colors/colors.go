@@ -54,5 +54,5 @@ func PrintColors() {
 		}
 	}
 	
-	fmt.Println("Processing Pixel Colors. Saving pixel output to printColors.txt" + ...."done")
+	fmt.Println("Processing Pixel Colors. Saving pixel output to printColors.txt" + "....done")
 }
