@@ -14,7 +14,7 @@ func MakeGrayScale() {
 
 	fmt.Println("Please type the image url you would like to use")
   
-	fmt.Scanln(imageUrl)
+	fmt.Scanln(&imageUrl)
 
 	// Open the original image
 	reader, err := os.Open(imageUrl)
