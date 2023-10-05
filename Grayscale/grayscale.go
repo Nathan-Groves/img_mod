@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-func makeGrayScale() {
+func MakeGrayScale() {
 
 	var imageUrl string = ""
 
