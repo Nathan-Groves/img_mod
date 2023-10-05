@@ -7,7 +7,7 @@ import (
     "io"
 )
 
-func getImage() {
+func GetImage() {
     
     // URL of the image you want to download
 
