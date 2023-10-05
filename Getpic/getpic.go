@@ -13,7 +13,7 @@ func GetImage() {
 
     var imageUrl string = ""
 
-	fmt.Println("Please type the image url you would like to use")
+	fmt.Printf("Please type the image url you would like to use")
 
 	fmt.Scanln(&imageUrl)
     
