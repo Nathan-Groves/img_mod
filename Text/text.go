@@ -16,7 +16,7 @@ func PrintImageText() {
 
 	fmt.Println("Please type the word you would like colored")
   
-	fmt.Scanln(word)
+	fmt.Scanln(&word)
 
 	// Create a temporary file and write the byte slice to it
 	tempFile, err := ioutil.TempFile("", "font-*.ttf")
