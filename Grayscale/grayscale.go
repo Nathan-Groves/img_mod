@@ -11,15 +11,14 @@ import (
 
 func MakeGrayScale() {
 
-	reader := bufio.NewReader(os.Stdin)
-	fmt.Println("Give me a number")
+	var imageUrl string = ""
 
-	fmt.Print("-> ")
+	fmt.Println("Enter name of image to grayscale")
 
-	text, _ := reader.ReadString('\n')
+	fmt.Scanln(&imageUrl)
 	
 	// Open the original image
-	reader, err := os.Open(text)
+	reader, err := os.Open(imageUrl)
 	if err != nil {
 		fmt.Printf("Error: %v\n", err)
 		return
