@@ -2,7 +2,6 @@ package Colors
 
 import (
 	"fmt"
-	"bufio"
 	"image"
 	_ "image/jpeg"
 	_ "image/png" // import this package to decode PNGs
@@ -11,15 +10,14 @@ import (
 
 func PrintColors() {
 
- 	 reader := bufio.NewReader(os.Stdin)
-	fmt.Println("Give me a number")
+	 var imageUrl string = ""
 
-	fmt.Print("-> ")
+	fmt.Println("Enter name of image to grayscale")
 
-	text, _ := reader.ReadString('\n')
+	fmt.Scanln(&imageUrl)
 	
   
-	reader, err := os.Open(text)
+	reader, err := os.Open(imageUrl)
 	if err != nil {
 		fmt.Printf("Error: %v\n", err)
 		return
