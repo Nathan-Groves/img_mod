@@ -11,13 +11,15 @@ import (
 
 func PrintColors() {
 
-  var imageUrl string = ""
+ 	 reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Give me a number")
 
-  fmt.Println("Please type the image url you would like to use")
+	fmt.Print("-> ")
 
-  fmt.Scanln(&imageUrl)
+	text, _ := reader.ReadString('\n')
+	
   
-	reader, err := os.Open("imageUrl")
+	reader, err := os.Open(text)
 	if err != nil {
 		fmt.Printf("Error: %v\n", err)
 		return
