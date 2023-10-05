@@ -8,7 +8,7 @@ import (
 	"golang.org/x/image/font/gofont/goregular"
 )
 
-func printImageText() {
+func PrintImageText() {
 	const W = 500
 	const H = 300
 
