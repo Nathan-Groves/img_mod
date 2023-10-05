@@ -13,7 +13,7 @@ func GetImage() {
 
   	 var imageUrl string = ""
 
-	fmt.Println("Enter name of image to printColor of")
+	fmt.Println("Enter name of image to download")
 
 	fmt.Scanln(&imageUrl)
 	
