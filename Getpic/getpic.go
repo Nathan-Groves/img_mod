@@ -3,7 +3,6 @@ package Getpic
 import (
     "fmt"
     "net/http"
-    "bufio"
     "os"
     "io"
 )
@@ -12,15 +11,15 @@ func GetImage() {
     
     // URL of the image you want to download
 
-  	 reader := bufio.NewReader(os.Stdin)
-	fmt.Println("Give me a image url for getImage")
+  	 var imageUrl string = ""
 
-	fmt.Print("-> ")
+	fmt.Println("Enter name of image to printColor of")
 
-	text, _ := reader.ReadString('\n')
+	fmt.Scanln(&imageUrl)
+	
     
     // Create an HTTP GET request
-    response, err := http.Get(text)
+    response, err := http.Get(imageUrl)
     if err != nil {
         fmt.Println("Error making the request:", err)
         return
@@ -48,5 +47,5 @@ func GetImage() {
         return
     }
 
-    fmt.Println("Image downloaded and saved as " + text)
+    fmt.Println("Image downloaded and saved as downloaded_image.jpg")
 }
