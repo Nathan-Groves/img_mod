@@ -12,7 +12,7 @@ func PrintColors() {
 
 	 var imageUrl string = ""
 
-	fmt.Println("Enter name of image to grayscale")
+	fmt.Println("Enter name of image to printColor of")
 
 	fmt.Scanln(&imageUrl)
 	
