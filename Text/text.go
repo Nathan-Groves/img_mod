@@ -4,6 +4,7 @@ import (
 	"io/ioutil"
 	"os"
 	"fmt"
+	"bufio"
 	"github.com/fogleman/gg"
 	"golang.org/x/image/font/gofont/goregular"
 )
@@ -12,11 +13,12 @@ func PrintImageText() {
 	const W = 500
 	const H = 300
 
-	var word string = ""
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Give me a number")
 
-	fmt.Println("Please type the word you would like colored")
-  
-	fmt.Scanln(&word)
+	fmt.Print("-> ")
+
+	text, _ := reader.ReadString('\n')
 
 	// Create a temporary file and write the byte slice to it
 	tempFile, err := ioutil.TempFile("", "font-*.ttf")
@@ -39,7 +41,7 @@ func PrintImageText() {
 	dc.Clear()
 
 	dc.SetRGB(.5, 0, 0)
-	dc.DrawStringAnchored(word, W/2, H/2, 0.5, 0.5)
+	dc.DrawStringAnchored(text, W/2, H/2, 0.5, 0.5)
 	dc.Stroke()
 
 	fmt.Println("Saving labeled image to coloredWord.png ... done")
