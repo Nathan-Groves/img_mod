@@ -14,7 +14,7 @@ func PrintImageText() {
 	const H = 300
 
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Println("Give me a number")
+	fmt.Println("Give me a number for text to color")
 
 	fmt.Print("-> ")
 
