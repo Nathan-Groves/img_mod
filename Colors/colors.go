@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-func printColors() {
+func PrintColors() {
 
   var imageUrl string = ""
 
